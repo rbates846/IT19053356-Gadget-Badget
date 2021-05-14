@@ -83,22 +83,22 @@ $(document).on("click", ".btnUpdate", function(event)
 // CLIENT-MODEL================================================================
 function validateResearchForm() 
 { 
-	// FIRSTNAME
+	// NAME
 	if ($("#researcheName").val().trim() == "") 
 	{ 
-	 	return "Insert name."; 
+	 	return "Insert Name"; 
 	} 
-	// LASTNAME
+	// INSTITUTE
 	if ($("#researchInstitute").val().trim() == "") 
 	{ 
-	 	return "Insert last name."; 
+	 	return "Insert Institute Name"; 
 	}
-	// ADDRESS-------------------------------
+	// Duration-------------------------------
 	if ($("#researchDuration").val().trim() == "") 
 	{ 
-	 	return "Insert address."; 
+	 	return "Insert Duration."; 
 	} 
-	// TYPE------------------------
+	// Description------------------------
 	if ($("#researchDescription").val().trim() == "") 
 	{ 
 	 	return "Insert Description."; 
