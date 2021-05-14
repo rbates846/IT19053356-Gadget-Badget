@@ -1,13 +1,13 @@
 <%@page import="com.Research"%>
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
+	
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
 <script src="Components/Research.js"></script>
@@ -16,10 +16,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-6">
-				<h1>Research Management</h1>
-
-				<form id="formResearch" name="formResearch" method="post"
-					action="Research.jsp">
+				<h1>Research Mangement</h1>
+				<form id="formResearch" name="formResearch" method="post" action="research.jsp">
 
 					Name: <input id="researcheName" name="researcheName" type="text"
 						class="form-control form-control-lg"><br> Institute:
@@ -38,23 +36,17 @@
 
 				</form>
 
-
-
 				<div id="alertSuccess" class="alert alert-success"></div>
 				<div id="alertError" class="alert alert-danger"></div>
 				<br>
-				<div id="divResearchGrid">
+				<div id="ResearchGrid">
 					<%
 						Research researchObj = new Research();
 					out.print(researchObj.readResearch());
 					%>
 				</div>
-
-
-
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>
