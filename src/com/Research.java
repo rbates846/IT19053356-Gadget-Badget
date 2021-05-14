@@ -66,9 +66,14 @@ public class Research {
 				return "Error while connecting to the database for reading.";
 			}
 			// Prepare the html table to be displayed
-			output = "<table border='1'><tr><th>Research Name</th><th>Institute</th>" + "<th>Duration</th>"
-					+ "<th>Description</th>"
-					+ "<th>Update</th><th>Remove</th></tr>";
+			output = "<table border='1' class='table table-bordered '>"
+					+ "<tr>"
+					+ "<th class='text-center'>Research Name</th><th class='text-center'>Institute</th>" 
+					+ "<th class='text-center'>Duration</th>"
+					+ "<th class='text-center'>Description</th>"
+					+ "<th class='text-center'>Update</th>"
+					+ "<th class='text-center'>Remove</th>"
+					+ "</tr>";
 
 			String query = "select * from researchmanagement";
 			Statement stmt = con.createStatement();
@@ -90,8 +95,8 @@ public class Research {
 				output += "<td>" + description + "</td>";
 				
 				// buttons
-				output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td> "
-				        + "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-researchid='" 
+				output += "<td class='text-center'><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td> "
+				        + "<td class='text-center'><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-researchid='" 
 				        + researchId + "'>"+ "</td></tr>" ;
 						
 			}
